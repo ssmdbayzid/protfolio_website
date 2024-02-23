@@ -47,22 +47,31 @@ const Projects = () => {
           <li>Firebaese</li>
         </ul>
         <div className={style.container}>
+          <a href="https://github.com/ssmdbayzid/testMedicare" target='_blank'>
           <button className={style.btn}>
             <span className='flex items-center gap-3'> <FaGithub className='text-lg'/> Client</span>
             <i />
           </button>
+          </a>
+
+          <a href="https://github.com/ssmdbayzid/testMedicare-server" target='_blank'>
           <button className={style.btn}>
             <span className='flex items-center gap-3'> <FaGithub className='text-lg'/> Backend</span>
             <i />
           </button>
+          </a>
+          <a href="https://medicare-817a0.web.app" target='_blank'>
           <button className={style.btn}>
             <span className='flex items-center gap-3'> <FaExternalLinkAlt  className='text-lg'/> Live</span>
             <i />
           </button>
+          </a>
+          <a href="/projects/1" target='_blank'>
           <button className={style.btn}>
             <span>Details</span>
             <i />
           </button>
+          </a>
         </div>
       </div>
     </div>
@@ -87,12 +96,7 @@ const Projects = () => {
             <span>Medicare Website</span>
           </p>
           <p className="justify mb-3 max-w-md text-justify text_para">
-            Our doctor appointment booking website provides a seamless platform
-            for patients to schedule appointments with healthcare providers
-            based on their specialties, availability, and location preferences.
-            Users can easily search for doctors, view their profiles, and book
-            appointments at their convenience, streamlining the healthcare
-            appointment process.
+          Experience seamless online shopping with our state-of-the-art e-commerce website. Discover a vast array of products, from trendy fashion to cutting-edge electronics, all easily accessible with user-friendly navigation. Enjoy secure transactions, swift delivery, and unparalleled customer satisfaction, making your online shopping experience both enjoyable and reliable
           </p>
         </div>
         <ul className="my-3 flex gap-3 font-semibold text-blue-600">
@@ -103,22 +107,31 @@ const Projects = () => {
           <li>Firebaese</li>
         </ul>
         <div className={style.container}>
+        <a href="https://github.com/ssmdbayzid/walmart" target='_blank'>
           <button className={style.btn}>
             <span className='flex items-center gap-3'> <FaGithub className='text-lg'/> Client</span>
             <i />
           </button>
+          </a>
+
+          <a href="https://github.com/ssmdbayzid/walmart-server" target='_blank'>
           <button className={style.btn}>
             <span className='flex items-center gap-3'> <FaGithub className='text-lg'/> Backend</span>
             <i />
           </button>
+          </a>
+          <a href="https://walmart-272ed.web.app" target='_blank'>
           <button className={style.btn}>
             <span className='flex items-center gap-3'> <FaExternalLinkAlt  className='text-lg'/> Live</span>
             <i />
           </button>
+          </a>
+          <a href="/projects/2" target='_blank'>
           <button className={style.btn}>
             <span>Details</span>
             <i />
           </button>
+          </a>
         </div>
       </div>
     </div>

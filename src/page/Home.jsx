@@ -8,8 +8,7 @@ import Projects from './Projects'
 
 const Home = () => {
   return (
-    <div>
-        <Header />
+    <div>        
         <HeroSection id="home" />
         <AboutMe id="about" />
         <Skills id="skills" />

@@ -23,11 +23,12 @@ const Header = () => {
       <div className=" max-w-[1170px]  w-full flex flex-wrap items-center justify-between mx-auto">
         <p className="flex items-center space-x-3 rtl:space-x-reverse">
           
-          <span className="flex items-center self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <a href='/'
+           className="flex items-center self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             <p className="text-4xl h-12 font-bold mr-2 bg-gradient-to-r from-indigo-600  to-pink-200 text-transparent bg-clip-text ps-5 md:ps-0">
               Bayzid
             </p>
-          </span>
+          </a>
         </p>
         {/* -------- Menu button ---------- */}
         <button
@@ -59,8 +60,8 @@ const Header = () => {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 text-white "
+                href="/home"
+                className="block py-2 px-3  bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 text-white "
                 aria-current="page"
               >
                 Home

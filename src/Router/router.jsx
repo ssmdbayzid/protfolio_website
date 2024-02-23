@@ -17,7 +17,7 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/project",
+                path: "/projects/:id",
                 element: <ProjectDetails />
             },
         ]
