@@ -1,0 +1,61 @@
+.ul li .date {
+    --dateH: 3rem;
+    height: var(--dateH);
+    margin-inline: calc(var(--inlineP) * -1);
+  
+    text-align: center;
+    background-color: #41516C;
+  
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+  
+    display: grid;
+    place-content: center;
+    position: relative;
+  
+    /* border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2); */
+  }
+  .date::before {
+     --inlineP: 1.5rem;
+    content: "";
+    width: var(--inlineP);
+    aspect-ratio: 1;
+    background: #0f1114;
+    background-image: linear-gradient(rgba(81, 87, 94, 0.5) 100%, transparent);
+    position: absolute;
+    top: 100%;
+    
+    clip-path: polygon(200% 200%, 0 0, 100% 0);
+    
+  }
+  
+  .ul {
+    position: relative;
+  }
+  .ul li .date::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    aspect-ratio: 1;
+    background: white;
+    border: 0.3rem solid red;
+    border-radius: 50%;
+    top: 50%;
+    z-index: 20;
+    transform: translate(0%, -50%);
+    /* right: calc(100% + var(--col-gap) + var(--line-w) / 2); */
+    right: -10%;
+  }
+  
+  .ul::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    right: -8%;
+    width: 0.5rem;
+    background: rgb(225, 225, 225);
+    border-radius: calc(var(--line-w) / 2);
+  }
+  

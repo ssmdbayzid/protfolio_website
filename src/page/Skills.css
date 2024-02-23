@@ -1,0 +1,61 @@
+
+@keyframes load {
+    from {
+        width: 0%;
+   }
+}
+@-webkit-keyframes load {
+    from {
+        width: 0%;
+   }
+}
+@-moz-keyframes load {
+    from {
+        width: 0%;
+   }
+}
+@-o-keyframes load {
+    from {
+        width: 0%;
+   }
+}
+.skillbar {
+    background-color: #e5e5e5;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.skillbar::before {
+    content: attr(data-skill);
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+}
+.skillbar.learning::before {
+    width: calc(20% - 14px);
+    background: #9ac4e9;
+}
+.skillbar.basic::before {
+    width: calc(40% - 14px);
+    background: #71a8d9;
+}
+.skillbar.intermediate::before {
+    width: calc(60% - 14px);
+    background: #3981bf;
+}
+.skillbar.advanced::before {
+    width: calc(80% - 14px);
+    background: #175a93;
+}
+.skillbar.expert::before {
+    width: calc(100% - 14px);
+    background: #163a59;
+}
