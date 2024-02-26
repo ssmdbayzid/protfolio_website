@@ -59,3 +59,30 @@
     border-radius: calc(var(--line-w) / 2);
   }
   
+  @media (max-width: 768px) {
+    .ul li .date::after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      aspect-ratio: 1;
+      background: white;
+      border: 0.3rem solid red;
+      border-radius: 50%;
+      top: 50%;
+      z-index: 20;
+      transform: translate(0%, -50%);
+      /* right: calc(100% + var(--col-gap) + var(--line-w) / 2); */
+      right: -3%;
+    }
+    
+    .ul::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      top:0;
+      right: -1%;
+      width: 0.5rem;
+      background: rgb(225, 225, 225);
+      border-radius: calc(var(--line-w) / 2);
+    }
+}

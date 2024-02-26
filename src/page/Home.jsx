@@ -8,12 +8,12 @@ import Projects from './Projects'
 
 const Home = () => {
   return (
-    <div>        
-        <HeroSection id="home" />
-        <AboutMe id="about" />
-        <Skills id="skills" />
-        <Projects id="projects" />
-        <ContactForm id="contact" />
+    <div className=''>        
+        <HeroSection />
+        <AboutMe  />
+        <Skills  />
+        <Projects/>
+        <ContactForm />
     </div>
   )
 }

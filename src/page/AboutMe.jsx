@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'react-ripples-hover';
+
 import style from './AboutMe.module.css'
 
 const AboutMe = () => {
   return (<>
-    <div className=" relative max-w-[1170px] w-full mx-auto flex items-center flex-col md:gap-7 md:flex-row-reverse justify-between mt-52 px-5 md:px-0 ">
+    <div id='about' className=" relative max-w-[1170px] w-full mx-auto flex items-center flex-col md:gap-7 md:flex-row-reverse justify-between mt-52 px-5 md:px-0 ">
       <div className="relative w-full md:w-3/5 mb-10 md:mb-0 md:pl-10 ">
         <h3 className="before:content-['about-me'] before:absolute before:-top-2 before:left-[28%]  md:before:left-4 before:text-[60px]   before:font-extrabold before:text-[#22252a] before:-z-10 text-center md:text-start font-bold  text-5xl ps-3 md:ps-0 hover:bg-transparent text-white/70">
           <span className='text-primary'>About</span> Me
@@ -18,14 +18,13 @@ const AboutMe = () => {
         </p>
 
         <p className='text_para text-justify'>Explore my <span className='text-primary'>portfolio</span>  below, and if you believe I align with your needs, feel free to reach out via <span className='text-primary'>email</span> & whatsApp number : <span className='text-primary'>01619788808</span>. I look forward to the possibility of collaborating with you on your next web development endeavor.</p>
-       </div>
-        
-       <a href="../assets/Resume of Bayzid.pdf" download="../assets/Resume of Bayzid.pdf" className=' text-lg font-light py-1'
-        >
-        <Link  variant="primary" duration={1.7}  > 
+       </div>                     
+          <a className='text-white px-2 py-3 font-light bg-primary'
+        href="../assets/Resume of Bayzid.pdf" download="../assets/Resume of Bayzid.pdf">
         Download Resume
-        </Link>
         </a>
+        
+        
       </div>
       <div className=" w-full md:w-1/2  ">
       <ul class={style.ul} >

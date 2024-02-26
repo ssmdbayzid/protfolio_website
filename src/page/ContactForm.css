@@ -22,3 +22,9 @@
     font-weight: 700;
     opacity: 0.15;
 }
+
+@media (max-width: 768px) {
+    .section-contact {
+        padding: 0px;		
+    }
+}

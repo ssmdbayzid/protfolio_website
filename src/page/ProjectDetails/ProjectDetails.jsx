@@ -19,7 +19,7 @@ const ProjectDetails = () => {
   
 const [viewType, setView] = useState("desktop") 
   return (
-    <div className="max-w-[1170px] w-full mx-auto md:px-0 px-5 py-10">
+    <div className="max-w-[1170px] w-full mx-auto md:px-0 px-5 py-28">
  {project && project.map(pro => 
   <div key={pro?.name} className="mx-auto flex justify-between items-center  flex-col gap-8 md:gap-20 md:flex-row">
     <div className="list relative mx-auto w-full md:w-1/2">

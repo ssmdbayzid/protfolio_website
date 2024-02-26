@@ -9,7 +9,11 @@ const Projects = () => {
   return (
     <div className="mx-auto max-w-[1170px] px-4 py-4 md:px-6 lg:py-8">
       {/* ---------- Heading --------- */}
-      <h3 className=" before:content-['My-Projects'] before:absolute before:-top-2 before:left-[30%]  md:before:left-[35%] before:text-[60px]   before:font-extrabold before:text-[#5c6066]/20 before:-z-10 my-10 font-bold  text-5xl hover:bg-transparent text-white/70 text-center relative">
+      <h3 className=" 
+      md:before:content-['My-Projects'] md:before:absolute md:before:-top-2
+      md:before:left-[30%] md:md:before:left-[35%] md:before:text-[60px]
+      md:before:font-extrabold before:text-[#5c6066]/20 before:-z-10
+      my-10 font-bold  text-5xl hover:bg-transparent text-white/70 text-center relative">
           <span className='text-primary'>My</span> Projects</h3>
   <div className="-mx-4 flex flex-wrap items-center">
     <div className="relative w-full px-4 md:w-1/2">
@@ -19,7 +23,7 @@ const Projects = () => {
             src={project1}
             alt=""
             srcSet=""
-            className="absolute -bottom-[1935px] object-cover group-hover:bottom-[190px] transition-all duration-[3000ms] h-auto w-full  md:z-50 "
+            className="absolute -bottom-[1560px] md:-bottom-[1935px] object-cover group-hover:bottom-[190px] transition-all duration-[3000ms] h-auto w-full  md:z-50 "
           />
         </div>
       </div>
@@ -39,7 +43,7 @@ const Projects = () => {
             appointment process.
           </p>
         </div>
-        <ul className="my-3 flex gap-3 font-semibold text-blue-600">
+        <ul className="my-3 flex md:flex-wrap gap-3 font-semibold text-blue-600">
           <li>React</li>
           <li>Node JS</li>
           <li>Mongo DB</li>
@@ -66,7 +70,7 @@ const Projects = () => {
             <i />
           </button>
           </a>
-          <a href="/projects/1" target='_blank'>
+          <a href="/projects/1" >
           <button className={style.btn}>
             <span>Details</span>
             <i />
@@ -84,7 +88,7 @@ const Projects = () => {
             src={project2}
             alt=""
             srcSet=""
-            className="absolute -bottom-[775px] object-cover group-hover:bottom-[190px] transition-all duration-[2000ms] w-full  "
+            className="absolute -bottom-[575px] md:-bottom-[775px] object-cover group-hover:bottom-[190px] transition-all duration-[2000ms] w-full  "
           />
         </div>
       </div>
@@ -126,7 +130,7 @@ const Projects = () => {
             <i />
           </button>
           </a>
-          <a href="/projects/2" target='_blank'>
+          <a href="/projects/2" >
           <button className={style.btn}>
             <span>Details</span>
             <i />

@@ -1,8 +1,27 @@
 import React, { useState } from 'react';
+import {AnchorLink} from 'react-anchor-link-smooth-scroll';
+import { IoMenu } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
+import Menu from './Menu';
+import { MdOutlineFileDownload } from "react-icons/md";
 
-const Header = () => {
+const Link = ({page, selectedPage, setSelectedPage}) => {
+  const lowerCasePage = page.toLowerCase();
+  return (<div 
+  className={`${selectedPage === lowerCasePage ? "text-primary" : "text-slate-400"} 
+  hover:text-primary transition duration-500 cursor-pointer`}
+  href={`#${lowerCasePage}`}
+  onClick={()=>setSelectedPage(lowerCasePage)}
+  >
+{page}
+  </div>)
+}
+
+
+
+const Header = ({setSelectedPage, selectedPage}) => {
   const [scroll, setScroll] = useState(false);
-
+  const [menuToggle, setMenuToggle] = useState(false)
   // change nav color when scroll
   const onChange = () => {
     if (window.scrollY >= 90) {
@@ -13,16 +32,12 @@ const Header = () => {
   };
   window.addEventListener('scroll', onChange);
   return (
+    
     <div
-      className={` ${
-        scroll
-          ? 'bg-gray-800 fixed top-0 left-0 w-full'
-          : 'bg-gray-800 relative transform duration-200'
-      }   header  z-[999] flex items-center md:py-2 py-3`}
+      className={` bg-gray-800 fixed top-0 left-0 z-[999] w-full transform duration-200 flex items-center md:px-0 px-2 md:py-2 py-3 `}
     >
       <div className=" max-w-[1170px]  w-full flex flex-wrap items-center justify-between mx-auto">
-        <p className="flex items-center space-x-3 rtl:space-x-reverse">
-          
+        <p className="flex items-center space-x-3 rtl:space-x-reverse">          
           <a href='/'
            className="flex items-center self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             <p className="text-4xl h-12 font-bold mr-2 bg-gradient-to-r from-indigo-600  to-pink-200 text-transparent bg-clip-text ps-5 md:ps-0">
@@ -31,78 +46,77 @@ const Header = () => {
           </a>
         </p>
         {/* -------- Menu button ---------- */}
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center mr-5 md:pr-0 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
+        <div
+            onClick={()=> setMenuToggle(!menuToggle)}
+            className=' md:hidden text-white rounded-sm p-0.5 '>
+            <IoMenu className='text-3xl' />
+            </div>
 
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a
-                href="/home"
-                className="block py-2 px-3  bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 text-white "
-                aria-current="page"
-              >
-                Home
-              </a>
+            <Link page="Home"
+            setSelectedPage={setSelectedPage}
+            selectedPage={selectedPage}
+            />
             </li>
             <li>
-              <a
-                href="/home#about"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white  dark:hover:bg-gray-700  md:dark:hover:bg-transparent"
-              >
-                About
-              </a>
+            <Link page="About"
+            setSelectedPage={setSelectedPage}
+            selectedPage={selectedPage}
+            />
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Projects
-              </a>
+            <Link page="Skills"
+            setSelectedPage={setSelectedPage}
+            selectedPage={selectedPage}
+            />
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Skills
-              </a>
+            <Link page="Projects"
+            setSelectedPage={setSelectedPage}
+            selectedPage={selectedPage}
+            />
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </a>
+            <Link page="Contact"
+            setSelectedPage={setSelectedPage}
+            selectedPage={selectedPage}
+            />
+            </li>
+            <li>
+            <a className='text-white px-4 py-1.5 font-light border bg-primary/20 border-primary flex items-center gap-2'
+        href="../assets/Resume of Bayzid.pdf" download="../assets/Resume of Bayzid.pdf">
+        Resume <MdOutlineFileDownload className='text-xl' />
+        </a>
             </li>
           </ul>
         </div>
       </div>
+      <div className={`md:hidden absolute  left-0 top-0 h-screen bg-slate-700 w-96 overflow-y-auto transition-transform transform ${menuToggle ? "translate-x-0" : "-translate-x-full"} ease-in-out duration-300`}>
+  <div className="flex justify-between items-center">
+    {/* -------- Logo ------- */}
+  <p className="flex items-center space-x-3 rtl:space-x-reverse">          
+          <a href='/'
+           className="flex items-center self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <p className="text-4xl h-12 font-bold mr-2 bg-gradient-to-r from-indigo-600  to-pink-200 text-transparent bg-clip-text ps-5 md:ps-0">
+              Bayzid 
+            </p>
+          </a>
+        </p>
+
+  {/* ------------ Closing Button -------------- */}
+  <div onClick={()=> setMenuToggle(!menuToggle)}
+ className="ml-auto  text-center w-10 m-3 p-2 bg-primary cursor-pointer">
+  <RxCross2 className='text-2xl text-white' />
+</div>
+  </div>
+
+<Menu selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+</div>
     </div>
+  
+    
   );
 };
 
