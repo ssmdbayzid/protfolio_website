@@ -34,7 +34,7 @@ const Header = ({setSelectedPage, selectedPage}) => {
   return (
     
     <div
-      className={` bg-gray-800 fixed top-0 left-0 z-[999] w-full transform duration-200 flex items-center md:px-0 px-2 md:py-2 py-3 `}
+      className={` bg-gray-800 fixed top-0 left-0 z-[999] w-full transform duration-200 flex items-center md:px-10 lg:px-0 px-2 md:py-2 py-3 `}
     >
       <div className=" max-w-[1170px]  w-full flex flex-wrap items-center justify-between mx-auto">
         <p className="flex items-center space-x-3 rtl:space-x-reverse">          

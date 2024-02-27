@@ -7,7 +7,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div className="mx-auto max-w-[1170px] px-4 py-4 md:px-6 lg:py-8">
+    <div className="mx-auto max-w-[1170px] px-10 py-4  md:px-6 lg:py-8">
       {/* ---------- Heading --------- */}
       <h3 className=" 
       md:before:content-['My-Projects'] md:before:absolute md:before:-top-2
@@ -16,19 +16,19 @@ const Projects = () => {
       my-10 font-bold  text-5xl hover:bg-transparent text-white/70 text-center relative">
           <span className='text-primary'>My</span> Projects</h3>
   <div className="-mx-4 flex flex-wrap items-center">
-    <div className="relative w-full px-4 md:w-1/2">
-      <div className="screen  overflow-hidden mb-6 h-[400px] md:before:absolute md:before:-bottom-3 md:before:right-12 md:before:top-10 md:before:h-[400px] md:before:w-[95%] md:before:border-2 md:before:bg-blue-500 lg:w-full">
-        <div className="relative border left-5 h-[600px] group">
+    <div className="relative w-full md:px-4 md:w-1/2">
+      <div className="screen  overflow-hidden mb-6 h-[400px] md:before:absolute md:before:-bottom-3 md:before:right-12 md:before:top-10 md:before:h-[400px] md:before:w-[95%]  md:before:border-2 md:before:bg-blue-500 lg:w-full">
+        <div className="relative border-2 left-5 h-[600px] group">
           <img
             src={project1}
             alt=""
             srcSet=""
-            className="absolute -bottom-[1560px] md:-bottom-[1935px] object-cover group-hover:bottom-[190px] transition-all duration-[3000ms] h-auto w-full  md:z-50 "
+            className="absolute transition-transform transform translate-y-0  hover:-translate-y-[calc(100%-400px)] object-cover  ease-in-out duration-[3000ms] h-auto w-full  md:z-50 "
           />
         </div>
       </div>
     </div>
-    <div className="w-full px-4 md:w-1/2">
+    <div className="w-full  px-4 md:w-1/2">
       <div className="lg:pl-20">
         <div className="mb-3">
           <p className="mb-3 inline-block text-3xl font-bold heading dark:text-gray-400">
@@ -88,7 +88,7 @@ const Projects = () => {
             src={project2}
             alt=""
             srcSet=""
-            className="absolute -bottom-[575px] md:-bottom-[775px] object-cover group-hover:bottom-[190px] transition-all duration-[2000ms] w-full  "
+            className="absolute transition-transform transform translate-y-0  hover:-translate-y-[calc(100%-400px)] object-cover  ease-in-out duration-[3000ms] h-auto w-full  md:z-50 "
           />
         </div>
       </div>
