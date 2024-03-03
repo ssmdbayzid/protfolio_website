@@ -7,7 +7,7 @@ const ContactForm = () => {
   {/* START CONTACT SECTION */}
   <div className="container">
     <div className="section-contact">
-      <div className="row justify-content-center">
+      <div className="row hidden md:block justify-content-center">
         <div className="col-12 col-lg-10 col-xl-8">
           <div className="header-section text-center">
             <h2 className="title text-primary">
@@ -19,6 +19,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+      
       <div className="font-[sans-serif] max-w-7xl mx-auto relative bg-gray-900 rounded-xl overflow-hidden">
   <div className="absolute -top-6 -left-6 w-20 h-20 rounded-full bg-blue-400" />
   <div className="absolute -bottom-6 -left-0 w-24 h-20 rounded-tr-[40px] bg-teal-200" />
@@ -32,7 +33,7 @@ const ContactForm = () => {
         className="mt-4 shrink-0 w-full"
       />
     </div>
-    <form className="bg-[#213979] p-6 xl:p-10">
+     <form className="bg-[#213979] p-6 xl:p-10">
       <div className="max-w-sm mx-auto space-y-4">
         <input
           type="text"
@@ -77,7 +78,7 @@ const ContactForm = () => {
           Send Message
         </button>
       </div>
-    </form>
+    </form> 
   </div>
 </div>
 

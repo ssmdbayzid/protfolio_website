@@ -34,12 +34,12 @@ const Header = ({setSelectedPage, selectedPage}) => {
   return (
     
     <div
-      className={` bg-gray-800 fixed top-0 left-0 z-[999] w-full transform duration-200 flex items-center md:px-10 lg:px-0 px-2 md:py-2 py-3 `}
+      className={` bg-gray-800 fixed top-0 left-0 z-[999] w-full transform duration-200 flex items-center lg:px-0 md:px-10 md:py-2 py-3 `}
     >
-      <div className=" max-w-[1170px]  w-full flex flex-wrap items-center justify-between mx-auto">
-        <p className="flex items-center space-x-3 rtl:space-x-reverse">          
+      <div className=" max-w-[1170px]  w-full flex flex-wrap items-center justify-between md:mx-auto">
+        <p className="flex items-center  rtl:space-x-reverse">          
           <a href='/'
-           className="flex items-center self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+           className="flex items-center  text-2xl font-semibold whitespace-nowrap dark:text-white">
             <p className="text-4xl h-12 font-bold mr-2 bg-gradient-to-r from-indigo-600  to-pink-200 text-transparent bg-clip-text ps-5 md:ps-0">
               Bayzid
             </p>
@@ -48,7 +48,7 @@ const Header = ({setSelectedPage, selectedPage}) => {
         {/* -------- Menu button ---------- */}
         <div
             onClick={()=> setMenuToggle(!menuToggle)}
-            className=' md:hidden text-white rounded-sm p-0.5 '>
+            className='md:hidden text-white rounded-sm pr-2'>
             <IoMenu className='text-3xl' />
             </div>
 
